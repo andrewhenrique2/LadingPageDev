@@ -1,18 +1,25 @@
-"use client"; // Indica que este componente é um Client Component
-
-import React, { useState } from "react"; // Importe o React e useState corretamente
+import React, { useState } from "react"; 
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
-import { User, Phone, Mail, ChevronDown } from 'lucide-react'; // Incluindo o ícone ChevronDown
-import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from "./ui/select"; // Importe os componentes Select
-import { Checkbox } from "./ui/checkbox"; // Importe o componente Checkbox
-import { Label } from "./ui/label"; // Importe o componente Label
+import { User, Phone, Mail, ChevronDown, Star, Monitor, Clock, FileText } from 'lucide-react'; 
+import { Select, SelectTrigger, SelectContent, SelectItem, SelectValue } from "./ui/select"; 
+import { Checkbox } from "./ui/checkbox"; 
+import { Label } from "./ui/label"; 
 
 const Form = () => {
-    const [selectedAge, setSelectedAge] = useState(""); // Agora useState funcionará corretamente
+    const [selectedAge, setSelectedAge] = useState(""); 
+    const [phone, setPhone] = useState("");
+
+    const handlePhoneChange = (e : React.ChangeEvent<HTMLInputElement>) => {
+        let value = e.target.value.replace(/\D/g, ''); // Remove tudo que não for número
+        if (value.length > 2) {
+            value = value.slice(0, 2) + '-' + value.slice(2);
+        }
+        setPhone(value);
+    };
 
     return (
-        <form className="space-y-4 pt-6 max-w-[900px] flex flex-col justify-center m-auto">
+        <form className="space-y-4 pt-6 max-w-[800px] flex flex-col justify-center m-auto">
             <div className="flex space-x-4">
                 <div className="relative w-1/2">
                     <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
@@ -20,7 +27,12 @@ const Form = () => {
                 </div>
                 <div className="relative w-1/2">
                     <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
-                    <Input placeholder="Telefone" className="w-full pl-10 bg-gray-900 text-white placeholder-gray-500 border border-gray-700" />
+                    <Input
+                        placeholder="Telefone"
+                        value={phone}
+                        onChange={handlePhoneChange}
+                        className="w-full pl-10 bg-gray-900 text-white placeholder-gray-500 border border-gray-700"
+                    />
                 </div>
             </div>
             <div className="flex space-x-4">
@@ -50,10 +62,30 @@ const Form = () => {
             </div>
             <Button 
                 type="submit" 
-                className="w-full bg-[#9a17ee] font-bold text-white rounded-lg hover:bg-[#b42bff] hover:brightness-105 transition-all duration-300 ease-in-out"
+                className="w-full h-[60px] bg-[#9a17ee] font-bold text-white rounded-lg hover:bg-[#b42bff] hover:brightness-105 transition-all duration-300 ease-in-out text-[19px] "
             >
-                Quero me inscrever agora
+               Comece a estudar agora
             </Button>
+
+            {/* Ícones e descrições abaixo do botão */}
+            <div className="flex justify-around pt-4 text-white">
+                <div className="flex flex-col items-center">
+                    <Star className="h-8 w-8 text-[#9a17ee]" />
+                    <span className="text-sm pt-2">Nota 4.9 de 5</span>
+                </div>
+                <div className="flex flex-col items-center">
+                    <Monitor className="h-8 w-8 text-[#9a17ee]" />
+                    <span className="text-sm  pt-2">+1.000 aulas</span>
+                </div>
+                <div className="flex flex-col items-center">
+                    <Clock className="h-8 w-8 text-[#9a17ee]" />
+                    <span className="text-sm  pt-2">+1.100h de conteúdo</span>
+                </div>
+                <div className="flex flex-col items-center">
+                    <FileText className="h-8 w-8 text-[#9a17ee]" />
+                    <span className="text-sm pt-2">+100 projetos práticos</span>
+                </div>
+            </div>
         </form>
     );
 }
