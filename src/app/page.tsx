@@ -3,7 +3,7 @@ import HeroSection from "@/components/HeroSection";
 
 export default function Home() {
   return (
-    <div className="min-h-screen  bg-gradient-to-b from-black to-[#1a0b1a]">
+    <div className="min-h-screen  bg-gradient-to-b from-black to-[#1a0b1a] h-[1900px]">
       <HeroSection />
       <CarouselCourses />
     </div>
