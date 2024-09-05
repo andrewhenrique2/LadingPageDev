@@ -2,8 +2,7 @@
 
 
   # <samp> Landing Page de Programação / Em andamento <br/>
-  <samp> <br/> ![localhost_3000_ (21)](https://github.com/user-attachments/assets/4c0e846f-16a3-4e57-bc8e-37d9fa3ceb61)
-
+  <samp> <br/> ![localhost_3000_ (23)](https://github.com/user-attachments/assets/c8b4b5cc-5987-46e5-ab6a-09e1ed1a6553)
 
 
 
