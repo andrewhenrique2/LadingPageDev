@@ -1,4 +1,5 @@
 import CarouselCourses from "@/components/CarouselCourses";
+import Footer from "@/components/Footer";
 import HeroSection from "@/components/HeroSection";
 import QuestionsWrapper from "@/components/QuestionsWrapper";
 
@@ -8,6 +9,7 @@ export default function Home() {
       <HeroSection />
       <CarouselCourses />     
       <QuestionsWrapper />
+      <Footer/>
 
     </div>
   );

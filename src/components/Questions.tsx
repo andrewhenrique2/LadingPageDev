@@ -8,23 +8,22 @@ import faq from '../../public/faq.png';
 
 const Questions = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen ">
+    <div className="flex justify-center items-center min-h-screen pt-36 md:pt-0">
       {/* Card com cor de fundo personalizada */}
-      <Card className="p-8 max-w-6xl border-none w-full bg-[#1c212c80] shadow-lg rounded-lg">
+      <Card className="p-8  border-none w-full bg-[#1c212c80] shadow-lg rounded-lg ">
         {/* Div Pai centralizada no meio da tela */}
-        <div className="flex flex-col md:flex-row gap-8 items-start">
-
+        <div className="flex flex-col xl:flex-row xl:gap-8 gap-4 items-start xl:items-center justify-center lg:flex-col-reverse w-full lg:w-[1203px]">
           {/* Coluna esquerda: Título e descrição */}
           <div className="flex-shrink-0 max-w-xl">
             <Image src={faq} alt="FAQ" className="w-20 h-20 rounded-md filter brightness-0 invert bg-transparent" />
-            <h1 className="text-4xl font-bold text-white ">
+            <h1 className="text-4xl font-bold text-white mt-4 lg:mt-0">
               Perguntas e respostas mais frequentes
             </h1>
           </div>
 
           {/* Coluna direita: Perguntas frequentes com largura definida */}
-          <div className="max-w-lg">
-            <Accordion type="single" collapsible className='w-[480px]'>
+          <div className="w-full max-w-lg ">
+            <Accordion type="single" collapsible className='w-full'>
               <AccordionItem value="item-1">
                 <AccordionTrigger className="flex justify-between text-xl text-gray-300 border-b border-gray-700 py-4">
                   01. O que é a Ladingpage?

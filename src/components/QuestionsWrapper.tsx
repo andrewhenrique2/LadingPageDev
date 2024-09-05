@@ -20,6 +20,7 @@ const QuestionsWrapper = () => {
     <Wrapper>
       <Questions />
     </Wrapper>
+    
   );
 };
 
