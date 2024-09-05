@@ -1,7 +1,9 @@
 <div align="center">
 
 
-  # <samp> Landing Page de Programação / Em andamento <br/>
+  # <samp> Landing Page de Programação <br/>
+  🌐 Deploy:  [Live](https://ladingpage-sage.vercel.app)
+
   <samp> <br/> ![localhost_3000_ (23)](https://github.com/user-attachments/assets/c8b4b5cc-5987-46e5-ab6a-09e1ed1a6553)
 
 
