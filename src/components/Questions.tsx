@@ -8,7 +8,7 @@ import faq from '../../public/faq.png';
 
 const Questions = () => {
   return (
-    <div className="flex justify-center items-center min-h-screen mt-12">
+    <div className="flex justify-center items-center min-h-screen ">
       {/* Card com cor de fundo personalizada */}
       <Card className="p-8 max-w-6xl border-none w-full bg-[#1c212c80] shadow-lg rounded-lg">
         {/* Div Pai centralizada no meio da tela */}
