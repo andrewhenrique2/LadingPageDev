@@ -1,4 +1,4 @@
-import React, { useState } from "react"; 
+import React, { useState } from "react";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { User, Phone, Mail, ChevronDown, Star, Monitor, Clock, FileText } from 'lucide-react'; 
@@ -19,13 +19,13 @@ const Form = () => {
     };
 
     return (
-        <form className="space-y-4 pt-6 max-w-[800px] flex flex-col justify-center m-auto">
+        <form className="space-y-4 pt-6 max-w-[800px] flex flex-col justify-center m-auto animate-fadeIn">
             <div className="flex space-x-4">
-                <div className="relative w-1/2">
+                <div className="relative w-1/2 animate-slideUp">
                     <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
                     <Input placeholder="Nome" className="w-full pl-10 bg-gray-900 text-white placeholder-gray-500 border border-gray-700" />
                 </div>
-                <div className="relative w-1/2">
+                <div className="relative w-1/2 animate-slideDown">
                     <Phone className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
                     <Input
                         placeholder="Telefone"
@@ -35,7 +35,7 @@ const Form = () => {
                     />
                 </div>
             </div>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 animate-fadeIn">
                 <div className="relative w-1/2">
                     <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
                     <Input type="email" placeholder="E-mail" className="w-full pl-10 bg-gray-900 text-white placeholder-gray-500 border border-gray-700" />
@@ -54,7 +54,7 @@ const Form = () => {
                     </Select>
                 </div>
             </div>
-            <div className="flex items-center space-x-2 py-2">
+            <div className="flex items-center space-x-2 py-2 animate-fadeIn">
                 <Checkbox id="terms" className="w-4 h-4 border-gray-700" />
                 <Label htmlFor="terms" className="text-gray-300">
                     Concordo com os Termos e Políticas de privacidade.
@@ -62,13 +62,13 @@ const Form = () => {
             </div>
             <Button 
                 type="submit" 
-                className="w-full h-[60px] bg-[#9a17ee] font-bold text-white rounded-lg hover:bg-[#b42bff] hover:brightness-105 transition-all duration-300 ease-in-out text-[19px] "
+                className="w-full h-[60px] bg-[#9a17ee] font-bold text-white rounded-lg hover:bg-[#b42bff] hover:brightness-105 transition-all duration-300 ease-in-out text-[19px] animate-slideUp"
             >
                Comece a estudar agora
             </Button>
 
             {/* Ícones e descrições abaixo do botão */}
-            <div className="flex justify-around pt-4 text-white">
+            <div className="flex justify-around pt-4 text-white animate-fadeIn">
                 <div className="flex flex-col items-center">
                     <Star className="h-8 w-8 text-[#9a17ee]" />
                     <span className="text-sm pt-2">Nota 4.9 de 5</span>
@@ -88,6 +88,6 @@ const Form = () => {
             </div>
         </form>
     );
-}
+};
 
 export default Form;

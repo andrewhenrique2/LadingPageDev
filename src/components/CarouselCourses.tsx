@@ -30,7 +30,7 @@ const CarouselCourses = () => {
   ];
 
   return (
-    <div className="container mx-auto py-10 pt-32 flex justify-center items-center flex-col">
+    <div className="container mx-auto py-10 pt-32 flex justify-center items-center flex-col mb-24">
       {/* Título do componente */}
       <h1 className="text-4xl font-bold text-white mb-8 text-center font-sans">
         Além das formações, ganhe acesso a diversos cursos
@@ -75,7 +75,7 @@ const CarouselCourses = () => {
           </CarouselContent>
 
           {/* Botões de navegação do Carousel */}
-          <div className="absolute bottom-[-50px] left-[50%] flex space-x-2">
+          <div className="absolute bottom-[-40px] left-[50%] flex space-x-2">
             {/* Botão anterior do Carousel */}
             <CarouselPrevious className="rounded-full bg-white p-2 shadow-lg" />
             {/* Botão próximo do Carousel */}

@@ -78,21 +78,26 @@
   }
 }
 
+
+
 @layer base {
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  
-    @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
-    
+    @apply bg-background text-foreground font-sans antialiased;
   }
 }
 
-/* Adicione isso ao seu CSS global */
+
+
+.clip-path-custom-curve {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+/* Removendo a barra de rolagem */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
@@ -101,4 +106,3 @@
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 }
-
